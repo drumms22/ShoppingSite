@@ -1,0 +1,585 @@
+{
+  "routes": [
+    {
+      "route": "user/get",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"user",
+        "access": true
+      },
+      "method": {
+        "name":"get",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request"
+      ]
+    },
+    {
+      "route": "user/contact",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"user",
+        "access": true
+      },
+      "method": {
+        "name":"contact",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "contact_email",
+        "contact_firstname",
+        "contact_lastname",
+        "contact_message"
+
+      ]
+    },
+    {
+      "route": "user/login",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"user",
+        "access": true
+      },
+      "method": {
+        "name":"login",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "email",
+        "password"
+      ]
+    },
+    {
+      "route": "user/save",
+      "tokenRequired": false,
+      "tokenReturn": true,
+      "accessLevel": 0,
+      "service": {
+        "name":"user",
+        "access": true
+      },
+     "method": {
+        "name":"save",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "email",
+        "firstname",
+        "lastname",
+        "phone",
+        "birthday",
+        "street",
+        "city",
+        "state",
+        "zipcode"
+      ]
+    },
+    {
+      "route": "user/register",
+      "tokenRequired": false,
+      "tokenReturn": true,
+      "accessLevel": 0,
+      "service": {
+        "name":"user",
+        "access": true
+      },
+      "method": {
+        "name":"register",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+      ],
+      "requiredInputs": [
+        "request",
+        "email",
+        "password"
+      ]
+    },
+    {
+      "route": "user/update",
+      "tokenRequired": false,
+      "tokenReturn": true,
+      "accessLevel": 0,
+      "service": {
+        "name":"user",
+        "access": true
+      },
+      "method": {
+        "name":"update",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "user_id"
+      ]
+    },
+    {
+      "route": "user/forgotPassword",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"user",
+        "access": true
+      },
+      "method": {
+        "name":"forgotPassword",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "email"
+      ]
+    },
+    {
+      "route": "user/passwordReset",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"user",
+        "access": true
+      },
+      "method": {
+        "name":"passwordReset",
+        "access": false
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "password",
+        "password_confirm",
+        "auth_token"
+      ]
+    },
+    {
+      "route": "user/logout",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"user",
+        "access": true
+      },
+      "method": {
+        "name":"logout",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "auth_token"
+      ]
+    },
+    {
+      "route": "cart/get",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"cart",
+        "access": true
+      },
+      "method": {
+        "name":"get",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request"
+      ]
+    },
+    {
+      "route": "cart/save",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"cart",
+        "access": true
+      },
+      "method": {
+        "name":"save",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "invoice_id",
+        "quantity",
+        "unit_price",
+        "discounted",
+        "total"
+      ]
+    },
+    {
+      "route": "cart/update",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"cart",
+        "access": true
+      },
+      "method": {
+        "name":"update",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "cart_id"
+      ]
+    },
+    {
+      "route": "cart/delete",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"cart",
+        "access": true
+      },
+      "method": {
+        "name":"delete",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "cart_id"
+      ]
+    },
+    {
+      "route": "cart/addItem",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"cart",
+        "access": true
+      },
+      "method": {
+        "name":"addItem",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request"
+      ]
+    },
+    {
+      "route": "cart/get",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"cart",
+        "access": true
+      },
+      "method": {
+        "name":"get",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request"
+      ]
+    },
+    {
+      "route": "order/get",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"order",
+        "access": true
+      },
+      "method": {
+        "name":"get",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request"
+      ]
+    },
+    {
+      "route": "order/addToOrder",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"order",
+        "access": true
+      },
+      "method": {
+        "name":"addToOrder",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request"
+      ]
+    },
+    {
+      "route": "order/startOrder",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"order",
+        "access": true
+      },
+      "method": {
+        "name":"startOrder",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request"
+      ]
+    },
+     {
+      "route": "order/updateOrder",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"order",
+        "access": true
+      },
+      "method": {
+        "name":"updateOrder",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "cart_id"
+      ]
+    },
+    {
+      "route": "order/deleteFromOrder",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"order",
+        "access": true
+      },
+      "method": {
+        "name":"deleteFromOrder",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "cart_id"
+      ]
+    },
+    {
+      "route": "order/processOrder",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"order",
+        "access": true
+      },
+      "method": {
+        "name":"processOrder",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "order_id"
+      ]
+    },
+    {
+      "route": "order/cancelOrder",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"order",
+        "access": true
+      },
+      "method": {
+        "name":"cancelOrder",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "order_id"
+      ]
+    },
+    {
+      "route": "order/delete",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"order",
+        "access": true
+      },
+      "method": {
+        "name":"delete",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "order_id"
+      ]
+    },
+    {
+      "route": "order/getProcessedOrders",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"order",
+        "access": true
+      },
+      "method": {
+        "name":"getProcessedOrders",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request"
+      ]
+    },
+    {
+      "route": "product/get",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"product",
+        "access": true
+      },
+      "method": {
+        "name":"get",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request"
+      ]
+    },
+    {
+      "route": "product/save",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"product",
+        "access": true
+      },
+      "method": {
+        "name":"save",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "category",
+        "product_name",
+        "sales_price",
+        "vendor"
+      ]
+    },
+    {
+      "route": "product/update",
+      "tokenRequired": false,
+      "tokenReturn": false,
+      "accessLevel": 0,
+      "service": {
+        "name":"product",
+        "access": true
+      },
+      "method": {
+        "name":"update",
+        "access": true
+      },
+      "requestMethods": [
+        "POST"
+       ],
+      "requiredInputs": [
+        "request",
+        "product_id"
+      ]
+    }
+  ]
+}
