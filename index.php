@@ -1,18 +1,6 @@
 
 <?php   
 
-/**
- * index.php
- *
- * Project Part 2
- *
- * @category   	P2
- * @package    	CIS-222
- * @author     	Nicholas Drummonds <ndrummonds@hawkmail.hfcc.edu>
- * @version    	2020.12.14
- * @link       	https://cislinux.hfcc.edu/~ndrummonds/cis222/p2/index.php
- *
- */
 
 include("commonFile.php"); ?>
 <!DOCTYPE html>
